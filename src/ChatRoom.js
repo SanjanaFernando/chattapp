@@ -1,11 +1,9 @@
-// ChatRoom.js
-
 import React, { useState, useEffect } from 'react';
 import './ChatRoom.css'; // Import the new CSS file
 
 const ChatRoom = () => {
     const [messages, setMessages] = useState([]);
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState(localStorage.getItem('username') || '');
     const [message, setMessage] = useState('');
 
     const fetchMessages = async () => {
@@ -48,6 +46,11 @@ const ChatRoom = () => {
         return () => clearInterval(interval);
     }, []); // Run only once on mount
 
+    const handleUserChange = (e) => {
+        setUser(e.target.value);
+        localStorage.setItem('username', e.target.value);
+    };
+
     return (
         <div className="chat-container">
             <h2 className="chat-title">Chat Room</h2>
@@ -64,7 +67,7 @@ const ChatRoom = () => {
                     className="chat-input user-input"
                     placeholder="Your name"
                     value={user}
-                    onChange={(e) => setUser(e.target.value)}
+                    onChange={handleUserChange}
                 />
                 <input
                     type="text"
