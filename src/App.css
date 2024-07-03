@@ -1,38 +1,98 @@
+/* src/App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #36393f;
+    color: #dcddde;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li {
+    background-color: #2f3136;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    color: #dcddde;
+    transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+li:hover {
+    background-color: #40444b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #72767d;
+    border-radius: 5px;
+    background-color: #40444b;
+    color: #dcddde;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #7289da;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #5b6eae;
+    color: #ffffff;
+}
+
+/* Additional Discord-like styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2f3136;
+    border-radius: 8px;
+}
+
+header {
+    background-color: #202225;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #72767d;
+}
+
+footer {
+    background-color: #202225;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #72767d;
+    text-align: right;
+}
+
+footer input {
+    width: calc(100% - 120px);
+}
+
+footer button {
+    width: 100px;
 }
