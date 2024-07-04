@@ -61,7 +61,7 @@ const ChatRoom = () => {
                     placeholder="Your name"
                     value={user}
                     onChange={(e) => setUser(e.target.value)}
-                    //readOnly // Prevents editing by user
+                    readOnly // Prevents editing by user
                 />
                 <input
                     type="text"
